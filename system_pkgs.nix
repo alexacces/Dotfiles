@@ -3,11 +3,12 @@
   ...
 }:
 {
-  packages = with pkgs; [
-    ghostty
-    fuzzel
-    firefox
-    waybar
-    swaybg
+  environment.systemPackages = [
+    pkgs.firefox
+    pkgs.ghostty
+    pkgs.fuzzel
+    pkgs.curl
+    pkgs.nerd-fonts.jetbrains-mono
+
   ];
 }

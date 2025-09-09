@@ -27,8 +27,10 @@
 
         modules = [
           ./system.nix
-          ./boot.nix
+          ./users.nix
+          ./wayland.nix
           ./system_pkgs.nix
+          ./boot.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
