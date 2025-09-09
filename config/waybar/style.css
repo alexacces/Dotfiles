@@ -1,0 +1,105 @@
+* {
+  font-family: JetBrainsMono Nerd Font;
+  font-weight: bold; 
+  font-size: 8px;
+  min-height: 0px;
+}
+
+#waybar {
+  background: transparent;
+  color: #c6d0f5;
+}
+#workspaces {
+  background: #101010;
+  margin: 2px;
+}
+
+#workspaces button {
+  color: #babbf1;
+}
+
+#workspaces button.focused{
+  background: #e78284;
+  color: #ffffff;
+  border-radius: 0px 0px 0px 0px;
+}
+
+button {
+  background: transparent;
+  padding: 0rem;
+}
+
+#workspaces button:hover {
+  background: #1e1e1e;
+  border: 0px solid transparent;
+}
+
+
+#taskbar {
+  background: #101010;
+}
+
+#taskbar button {
+  color: #babbf1;
+}
+
+#taskbar button.focused{
+  background: #e78284;
+  color: #ffffff;
+}
+
+#taskbar button:hover {
+  background: #1e1e1e;
+  border: 0px solid transparent;
+}
+#clock,
+#pulseaudio,
+#network,
+#custom-avatar,
+#cpu,
+#temperature,
+#tray,
+#memory{
+  background-color: #101010;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 0rem;
+  padding:0px 5px 0px 5px;
+}
+
+#clock {
+  color: #05f009;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+} 
+#custom-avatar {
+  color: #05f009;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+} 
+
+#pulseaudio {
+  margin-left: 2px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
+#network {
+  color: #ea999c;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
+#cpu {
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
+#temperature {
+  color: #05f009;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
+#memory {
+  color: #ea999c;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
+
