@@ -5,7 +5,6 @@
 {
   imports = [
     /etc/nixos/hardware-configuration.nix
-    ./boot.nix
   ];
   networking.networkmanager.enable = true;
   time.timeZone = "Asia/Jakarta";
@@ -17,13 +16,6 @@
     isNormalUser = true;
     shell = pkgs.zsh;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-    packages = with pkgs; [
-      ghostty
-      fuzzel
-      firefox
-      waybar
-      swaybg
-    ];
   };
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
