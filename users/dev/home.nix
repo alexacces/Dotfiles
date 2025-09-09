@@ -16,7 +16,7 @@
     nodejs
     clang
     tree
-    nixd
+    nil
     nixfmt
     fastfetch
   ];

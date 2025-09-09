@@ -58,9 +58,9 @@ lspconfig.lua_ls.setup({
 })
 
 local nvim_lsp = require("lspconfig")
-nvim_lsp.nixd.setup({
+nvim_lsp.nil_ls.setup({
    settings = {
-      nixd = {
+      nil_ls = {
          formatting = {
             command = { "nixfmt" },
          },

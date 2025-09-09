@@ -20,7 +20,6 @@
   boot.loader.grub.device = "nodev"; # or "nodev" for efi only
 
   networking.networkmanager.enable = true;
-
   time.timeZone = "Asia/Jakarta";
   services.xserver.enable = true;
   services.xserver.displayManager.gdm.wayland.enable = true;
@@ -46,5 +45,4 @@
     "flakes"
   ];
   system.stateVersion = "25.05"; # Did you read the comment?
-
 }
