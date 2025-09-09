@@ -8,7 +8,7 @@
   home.username = "dev";
   home.homeDirectory = "/home/dev";
   home.file.".config/nvim" = {
-    source = ./config/nvim;
+    source = ../../config/nvim;
     recursive = true;
   };
   home.packages = with pkgs; [
