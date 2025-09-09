@@ -8,7 +8,7 @@
     pkgs.ghostty
     pkgs.fuzzel
     pkgs.curl
-    pkgs.nerd-fonts.jetbrains-mono
-
+    pkgs.waybar
+    pkgs.swaybg
   ];
 }
