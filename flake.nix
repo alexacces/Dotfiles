@@ -32,17 +32,13 @@
           ./modules/system/systemUsers.nix
           ./modules/system/systemPkgs.nix
           ./modules/system/systemWayland.nix
-
-          #home manager config
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.dev = import ./users/dev/home.nix {
-              inherit pkgs inputs;
-            };
-          }
         ];
+        homeConfigurations.dev = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs inputs;
+          modules = [
+            ./users/dev/home.nix
+          ];
+        };
       };
     };
 }
