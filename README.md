@@ -1,2 +1,2 @@
-# nixos
-nixos config 
+# nixosConfiguration
+# dotfileConfiguration
