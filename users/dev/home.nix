@@ -1,4 +1,9 @@
-{ pkgs, inputs, ... }:
+{
+  pkgs,
+  inputs,
+  lib,
+  ...
+}:
 
 {
   xdg.enable = true;
@@ -10,6 +15,9 @@
 
   home.username = "dev";
   home.homeDirectory = "/home/dev";
+  home.activation.myHook = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    ~/nixos/bin/update-config
+  '';
 
   home.packages = with pkgs; [
     lua-language-server

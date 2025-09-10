@@ -2,7 +2,7 @@
   description = "Nixos flakes + Home-manager";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
@@ -35,8 +35,11 @@
       homeConfigurations.dev = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
-          (import ./users/dev/home.nix { inherit pkgs inputs; })
+          ./users/dev/home.nix
         ];
+        extraSpecialArgs = {
+          inherit inputs;
+        };
       };
     };
 }
