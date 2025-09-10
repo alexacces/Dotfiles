@@ -16,7 +16,8 @@
   home.username = "dev";
   home.homeDirectory = "/home/dev";
   home.activation.myHook = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    ~/nixos/bin/update-config
+    cp -av $HOME/nixos/modules/dotConfig/* ~/.config;
+    for f in $HOME/nixos/modules/homeConfig/*; do cp -av "$f" ~/."$(basename "$f")"; done
   '';
 
   home.packages = with pkgs; [
@@ -28,6 +29,7 @@
     nixfmt
     fastfetch
     nerd-fonts.jetbrains-mono
+    tmux
   ];
 
   programs.git.enable = true;

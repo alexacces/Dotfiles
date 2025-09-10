@@ -1,6 +1,0 @@
-#!/run/current-system/sw/bin/zsh
-zsh -c 'cp -av ./modules/dotConfig/* ~/.config'
-echo "All .config is Update!!"
-zsh -c 'for f in ./modules/homeConfig/*; do cp -av "$f" ~/."$(basename "$f")"; done'
-echo "All home config is Update!!"
-
