@@ -26,12 +26,11 @@
         system = system;
 
         modules = [
-          ./system_core.nix
-          ./system_boot.nix
-          ./system_users.nix
-          ./system_wayland.nix
-          ./system_pkgs.nix
-
+          ./modules/system/systemCore.nix
+          ./modules/system/systemBoot.nix
+          ./modules/system/systemUsers.nix
+          ./modules/system/systemPkgs.nix
+          ./modules/system/systemWayland.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
