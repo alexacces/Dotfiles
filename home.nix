@@ -16,6 +16,7 @@
 
   home.packages = with pkgs; [
     lua-language-server
+    hyprlock
     nodejs
     clang
     tree
@@ -27,6 +28,7 @@
     ghostty
     fuzzel
     waybar
+    gimp3-with-plugins
     swaybg
   ];
 

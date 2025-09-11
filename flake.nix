@@ -48,10 +48,12 @@
       };
 
       apps.${system} = {
+        default = self.apps.${system}.dev;
         dev = {
           type = "app";
           program = "${self.homeConfigurations.dev.activationPackage}/activate";
         };
       };
     };
+
 }
