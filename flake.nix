@@ -35,11 +35,12 @@
       homeConfigurations.dev = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
-          ./users/dev/home.nix
+          ./home.nix
         ];
         extraSpecialArgs = {
           inherit inputs;
         };
       };
+
     };
 }

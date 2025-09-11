@@ -7,12 +7,6 @@
 
 {
   xdg.enable = true;
-
-  programs.neovim = {
-    enable = true;
-    package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
-  };
-
   home.username = "dev";
   home.homeDirectory = "/home/dev";
   home.activation.myHook = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
@@ -32,6 +26,10 @@
     tmux
   ];
 
+  programs.neovim = {
+    enable = true;
+    package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+  };
   programs.git.enable = true;
 
   home.stateVersion = "25.05";
