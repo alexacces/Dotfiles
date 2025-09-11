@@ -42,7 +42,7 @@ for _, path in ipairs(runtime_paths) do
 end
 
 lspconfig.lua_ls.setup({
-    cmd = { "/etc/profiles/per-user/dev/bin/lua-language-server" },
+    cmd = { "/home/dev/.nix-profile/bin/lua-language-server" },
     capabilities = capabilities,
   settings = {
     Lua = {

@@ -24,12 +24,17 @@
     fastfetch
     nerd-fonts.jetbrains-mono
     tmux
+    ghostty
+    fuzzel
+    waybar
+    swaybg
   ];
 
   programs.neovim = {
     enable = true;
     package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
   };
+
   programs.git.enable = true;
 
   home.stateVersion = "25.05";
