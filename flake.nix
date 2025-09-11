@@ -23,11 +23,11 @@
         system = system;
 
         modules = [
-          ./modules/system/systemCore.nix
-          ./modules/system/systemBoot.nix
-          ./modules/system/systemUsers.nix
-          ./modules/system/systemPkgs.nix
-          ./modules/system/systemWayland.nix
+          ./modules/systemConfig/systemCore.nix
+          ./modules/systemConfig/systemBoot.nix
+          ./modules/systemConfig/systemUsers.nix
+          ./modules/systemConfig/systemPkgs.nix
+          ./modules/systemConfig/systemWayland.nix
 
         ];
       };
