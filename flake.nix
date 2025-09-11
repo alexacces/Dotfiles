@@ -23,7 +23,6 @@
       };
     in
     {
-
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = system;
 
@@ -48,7 +47,7 @@
       };
 
       apps.${system} = {
-        default = self.apps.${system}.dev;
+        #   default = self.apps.${system}.dev;
         dev = {
           type = "app";
           program = "${self.homeConfigurations.dev.activationPackage}/activate";
