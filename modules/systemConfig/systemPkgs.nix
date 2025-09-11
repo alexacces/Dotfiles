@@ -10,6 +10,5 @@
     pkgs.curl
     pkgs.waybar
     pkgs.swaybg
-    pkgs.home-manager
   ];
 }

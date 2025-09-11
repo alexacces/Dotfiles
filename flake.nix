@@ -9,7 +9,12 @@
   };
 
   outputs =
-    { nixpkgs, home-manager, ... }@inputs:
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -42,5 +47,11 @@
         };
       };
 
+      apps.${system} = {
+        dev = {
+          type = "app";
+          program = "${self.homeConfigurations.dev.activationPackage}/activate";
+        };
+      };
     };
 }
