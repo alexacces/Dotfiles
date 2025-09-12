@@ -1,2 +1,1 @@
 sudo nixos-rebuild switch --impure --flake .
-nix run .#dev
