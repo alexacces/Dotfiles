@@ -3,7 +3,7 @@
 }:
 {
   services.xserver.enable = true;
-  services.xserver.displayManager.gdm.wayland.enable = true;
+  services.displayManager.ly.enable = true;
   programs.niri = {
     enable = true;
   };
