@@ -1,0 +1,3 @@
+nixos-rebuild switch --impure --flake .
+passwd dev
+
