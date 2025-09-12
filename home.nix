@@ -16,7 +16,6 @@
 
   home.packages = with pkgs; [
     lua-language-server
-    hyprlock
     nodejs
     clang
     tree
@@ -25,9 +24,6 @@
     fastfetch
     nerd-fonts.jetbrains-mono
     tmux
-    ghostty
-    fuzzel
-    waybar
     gimp3-with-plugins
     swaybg
   ];
