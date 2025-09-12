@@ -10,5 +10,6 @@ pkgs.ghostty
 pkgs.waybar
 pkgs.fuzzel
 pkgs.hyprlock
+pkg.git
   ];
 }
