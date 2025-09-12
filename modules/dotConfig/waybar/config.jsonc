@@ -5,13 +5,12 @@
      "margin-top": 10,
     "height": 6, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "custom/avatar"
+        "custom/avatar",
+        "niri/workspaces"
     ],
     "modules-center": [
-        "niri/workspaces"
     ],
     "modules-right": [
         "clock",
@@ -23,10 +22,10 @@
         "tray",
     ],
     "custom/avatar" : {
-         "format": "󰣇",
+         "format": " ",
     },
      "niri/workspaces": {
-         "format": "{icon}",
+         "format":"{icon}",
          "format-icons": {
              "focused": "",
              "default": ""

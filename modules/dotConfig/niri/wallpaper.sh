@@ -1,1 +1,1 @@
-swaybg -i ~/nixos/wallpaper/wallpaper2.jpg
+swaybg -i ~/nixos/wallpaper/wallpaper3.jpg
