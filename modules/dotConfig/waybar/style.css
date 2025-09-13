@@ -41,7 +41,7 @@ button {
 #temperature,
 #tray,
 #memory{
-  background-color: #101010;
+  background-color: transparent;
   padding: 0rem;
   padding:0px 5px 0px 5px;
 }
@@ -50,6 +50,7 @@ button {
 } 
 
 #clock {
+    background :#1e1e1e;
 } 
 
 #pulseaudio {
