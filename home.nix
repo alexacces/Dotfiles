@@ -25,6 +25,7 @@
     nerd-fonts.jetbrains-mono
     tmux
     gimp3-with-plugins
+    xclip
   ];
 
   programs.neovim = {
