@@ -206,7 +206,6 @@ awful.screen.connect_for_each_screen(function(s)
 s.mywibox:struts({
     top = 15  -- sesuaikan dengan tinggi bar
 })
-
     -- Add widgets to the wibox
     s.mywibox:setup {
         layout = wibox.layout.align.horizontal,
