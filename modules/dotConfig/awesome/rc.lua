@@ -43,7 +43,8 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+beautiful.init(gears.filesystem.get_configuration_dir() .. "custom.lua")
+--beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 -- This is used later as the default terminal and editor to run.
 terminal = "ghostty"
 editor = os.getenv("EDITOR") or "nano"
@@ -162,6 +163,7 @@ end
 screen.connect_signal("property::geometry", set_wallpaper)
 
 awful.screen.connect_for_each_screen(function(s)
+
     -- Wallpaper
     set_wallpaper(s)
 
@@ -184,24 +186,29 @@ awful.screen.connect_for_each_screen(function(s)
         filter  = awful.widget.taglist.filter.all,
         buttons = taglist_buttons
     }
-
     -- Create a tasklist widget
     s.mytasklist = awful.widget.tasklist {
         screen  = s,
         filter  = awful.widget.tasklist.filter.currenttags,
         buttons = tasklist_buttons
     }
-
     -- Buat wibar
-    s.mywibox = awful.wibar({
-        position = "top",
-        screen = s,
-    })
-    -- Create the wibox
-    --s.mywibox = awful.wibar({ position = "top", screen = s })
+ s.mywibox = wibox({
+        x = 0,
+        y = 10,  -- 🔥 Bar akan turun 10px dari atas layar
+        width = s.geometry.width,
+        height = 15,
+        ontop = true,
+        visible = true,
+        bg = "#222222",
+        fg = "#ffffff",
+    })   -- Create the wibox
+s.mywibox:struts({
+    top = 15  -- sesuaikan dengan tinggi bar
+})
 
     -- Add widgets to the wibox
-s.mywibox:setup {
+    s.mywibox:setup {
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
