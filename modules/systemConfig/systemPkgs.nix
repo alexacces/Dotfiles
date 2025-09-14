@@ -11,5 +11,8 @@
     pkgs.fuzzel
     pkgs.hyprlock
     pkgs.git
+    pkgs.swaybg
+    pkgs.pavucontrol
+    pkgs.kdePackages.dolphin
   ];
 }

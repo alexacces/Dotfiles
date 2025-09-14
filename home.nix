@@ -25,10 +25,6 @@
     nerd-fonts.jetbrains-mono
     tmux
     gimp3-with-plugins
-    swaybg
-    pavucontrol
-    kdePackages.dolphin
-    qemu
   ];
 
   programs.neovim = {

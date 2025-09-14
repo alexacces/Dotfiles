@@ -4,9 +4,14 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+
+    xlibre-overlay.url = "git+https://codeberg.org/takagemacoed/xlibre-overlay";
+
   };
 
   outputs =
@@ -15,6 +20,7 @@
       nixpkgs,
       home-manager,
       nixpkgs-unstable,
+      xlibre-overlay,
       ...
     }@inputs:
     let
@@ -33,7 +39,11 @@
           ./modules/systemConfig/systemBoot.nix
           ./modules/systemConfig/systemUsers.nix
           ./modules/systemConfig/systemPkgs.nix
-          ./modules/systemConfig/systemWayland.nix
+          #./modules/systemConfig/systemWayland.nix
+          ./modules/systemConfig/systemXlibre.nix
+
+          xlibre-overlay.nixosModules.overlay-xlibre-xserver
+          xlibre-overlay.nixosModules.overlay-all-xlibre-drivers
         ];
       };
 
