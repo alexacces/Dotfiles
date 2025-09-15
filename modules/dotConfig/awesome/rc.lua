@@ -192,19 +192,18 @@ awful.screen.connect_for_each_screen(function(s)
         filter  = awful.widget.tasklist.filter.currenttags,
         buttons = tasklist_buttons
     }
-    -- Buat wibar
  s.mywibox = wibox({
         x = 0,
-        y = 10,  -- 🔥 Bar akan turun 10px dari atas layar
+        y = 10,  
         width = s.geometry.width,
-        height = 15,
+        height = 24,
         ontop = true,
         visible = true,
         bg = "#222222",
         fg = "#ffffff",
-    })   -- Create the wibox
+    })   
 s.mywibox:struts({
-    top = 15  -- sesuaikan dengan tinggi bar
+    top = 34
 })
     -- Add widgets to the wibox
     s.mywibox:setup {
