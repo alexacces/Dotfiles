@@ -26,6 +26,7 @@
     tmux
     gimp3-with-plugins
     xclip
+    ntfs3g
   ];
 
   programs.neovim = {

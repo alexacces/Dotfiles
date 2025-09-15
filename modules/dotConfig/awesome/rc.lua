@@ -196,14 +196,14 @@ awful.screen.connect_for_each_screen(function(s)
         x = 0,
         y = 10,  
         width = s.geometry.width,
-        height = 24,
+        height = 20,
         ontop = true,
         visible = true,
         bg = "#222222",
         fg = "#ffffff",
     })   
 s.mywibox:struts({
-    top = 34
+    top = 30
 })
     -- Add widgets to the wibox
     s.mywibox:setup {

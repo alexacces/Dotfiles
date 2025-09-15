@@ -41,6 +41,7 @@
           ./modules/systemConfig/systemPkgs.nix
           #./modules/systemConfig/systemWayland.nix
           ./modules/systemConfig/systemXlibre.nix
+          ./modules/systemConfig/vm.nix
 
           xlibre-overlay.nixosModules.overlay-xlibre-xserver
           xlibre-overlay.nixosModules.overlay-all-xlibre-drivers
