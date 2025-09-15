@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Lokasi direktori tempat project-project kamu disimpan
+PROJECTS_DIR=~/
+
+cd "$PROJECTS_DIR" || exit
+
+# Cari direktori langsung di dalam PROJECTS_DIR
+selected=$(find . -maxdepth 1 -mindepth 1 -type d | sed 's|^\./||' | fzf --prompt="Select project: ")
+
+# Keluar kalau tidak memilih apa-apa
+[ -z "$selected" ] && exit
+
+# Gunakan nama direktori sebagai nama tmux session
+tmux new-session -A -s "$selected" -c "$PROJECTS_DIR/$selected"
+

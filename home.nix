@@ -26,6 +26,7 @@
     tmux
     gimp3-with-plugins
     xclip
+    fzf
     ntfs3g
   ];
 
