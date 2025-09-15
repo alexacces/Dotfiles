@@ -5,7 +5,11 @@ require("mason-lspconfig").setup {
     "rust_analyzer",
     "vimls",
     "bashls",
+    "cssls",
+    "css_variables",
+    "cssmodules_ls",
     "html",
+    "tailwindcss",
     "pyright"
 },
      automatic_enable = {
@@ -14,6 +18,10 @@ require("mason-lspconfig").setup {
         "html",
         "bashls",
         "pyright",
+        "cssls",
+        "tailwindcss",
+        "css_variables",
+        "cssmodules_ls",
     }
 }
 
