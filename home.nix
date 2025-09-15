@@ -28,6 +28,8 @@
     xclip
     fzf
     ntfs3g
+    nodePackages.typescript
+    nodePackages.typescript-language-server
   ];
 
   programs.neovim = {

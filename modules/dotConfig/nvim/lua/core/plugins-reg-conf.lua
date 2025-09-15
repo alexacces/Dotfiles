@@ -1,5 +1,13 @@
 vim.pack.add({
       {
+        src ="https://github.com/rafamadriz/friendly-snippets",
+        version = vim.version.range('*'),
+      },
+      {
+        src ="https://github.com/L3MON4D3/LuaSnip",
+        version = vim.version.range('*'),
+      },
+      {
         src ="https://github.com/Saghen/blink.cmp",
         version = vim.version.range('*'),
       },

@@ -57,6 +57,7 @@ lspconfig.lua_ls.setup({
   },
 })
 
+-- for nixos
 local nvim_lsp = require("lspconfig")
 nvim_lsp.nil_ls.setup({
    settings = {
@@ -73,4 +74,8 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     vim.lsp.buf.format({ async = false })
   end,
 })
+
+
+--fot javascript
+nvim_lsp.ts_ls.setup({})
 
