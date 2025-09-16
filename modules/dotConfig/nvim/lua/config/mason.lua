@@ -1,18 +1,19 @@
 require("mason").setup {}
 require("mason-lspconfig").setup {
-    ensure_installed = { 
-    "lua_ls";
-    "rust_analyzer",
-    "vimls",
-    "bashls",
-    "cssls",
-    "css_variables",
-    "cssmodules_ls",
-    "html",
-    "tailwindcss",
-    "pyright"
-},
-     automatic_enable = {
+    ensure_installed = {
+        "lua_ls", -- manual
+        "eslint", -- manual
+        "rust_analyzer",
+        "vimls",
+        "bashls",
+        "cssls",
+        "css_variables",
+        "cssmodules_ls",
+        "html",
+        "tailwindcss",
+        "pyright",
+    },
+    automatic_enable = {
         "rust_analyzer",
         "vimls",
         "html",
@@ -22,6 +23,6 @@ require("mason-lspconfig").setup {
         "tailwindcss",
         "css_variables",
         "cssmodules_ls",
+        "stylua",
     }
 }
-

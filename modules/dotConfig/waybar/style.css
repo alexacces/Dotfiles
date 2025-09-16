@@ -1,12 +1,12 @@
 * {
   font-family: JetBrainsMono Nerd Font;
-  font-weight: bold; 
+  font-weight: bold;
   font-size: 10px;
   min-height: 0px;
 }
 
 #waybar {
-  background:transparent;
+  background: transparent;
   color: #c6d0f5;
 }
 #workspaces {
@@ -17,8 +17,8 @@
   color: #babbf1;
 }
 
-#workspaces button.focused{
-  background:#c29176;
+#workspaces button.focused {
+  background: #c29176;
   color: #000000;
   border-radius: 0px 0px 0px 0px;
 }
@@ -40,18 +40,18 @@ button {
 #cpu,
 #temperature,
 #tray,
-#memory{
+#memory {
   background-color: transparent;
   padding: 0rem;
-  padding:0px 5px 0px 5px;
+  padding: 0px 5px 0px 5px;
 }
 #custom-avatar {
-    color : #34d8eb;
-} 
+  color: #34d8eb;
+}
 
 #clock {
-    background :#1e1e1e;
-} 
+  background: #1e1e1e;
+}
 
 #pulseaudio {
 }
@@ -63,4 +63,3 @@ button {
 }
 #memory {
 }
-

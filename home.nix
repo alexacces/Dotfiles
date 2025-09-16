@@ -15,12 +15,8 @@
   '';
 
   home.packages = with pkgs; [
-    lua-language-server
-    nodejs
     clang
     tree
-    nil
-    nixfmt
     fastfetch
     nerd-fonts.jetbrains-mono
     tmux
@@ -28,8 +24,16 @@
     xclip
     fzf
     ntfs3g
+    #for neovim
     nodePackages.typescript
     nodePackages.typescript-language-server
+    lua-language-server
+    nil
+    nixfmt
+    unzip
+    nodejs
+    stylua
+    prettierd
   ];
 
   programs.neovim = {
