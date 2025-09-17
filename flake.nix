@@ -9,8 +9,8 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
-
     xlibre-overlay.url = "git+https://codeberg.org/takagemacoed/xlibre-overlay";
+    #xlibre-overlay.url = "/home/dev/Project/xlibre-overlay/";
 
   };
 
