@@ -32,6 +32,7 @@
       };
     in
     {
+      #system level config
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = system;
         modules = [
@@ -48,6 +49,7 @@
         ];
       };
 
+      #home level config
       homeConfigurations.dev = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
