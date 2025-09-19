@@ -12,5 +12,7 @@ selected=$(find . -maxdepth 1 -mindepth 1 -type d | sed 's|^\./||' | fzf --promp
 [ -z "$selected" ] && exit
 
 # Gunakan nama direktori sebagai nama tmux session
-tmux new-session -A -s "$selected" -c "$PROJECTS_DIR/$selected"
+
+tmux new-session -A -d -s "$selected" -c "$PROJECTS_DIR/$selected" 2>/dev/null
+tmux switch-client -t "$selected"
 
