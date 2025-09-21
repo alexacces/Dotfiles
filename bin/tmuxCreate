@@ -15,5 +15,4 @@ selected=$(find . -maxdepth 1 -mindepth 1 -type d | sed 's|^\./||' | fzf --promp
 
 tmux new-session -A -d -s "$selected" -c "$PROJECTS_DIR/$selected" 2>/dev/null
 tmux switch-client -t "$selected"
-tmux switch-client -t "$selected"
 

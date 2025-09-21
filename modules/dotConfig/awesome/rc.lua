@@ -17,7 +17,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 require("awful.hotkeys_popup.keys")
 
 -- {{{ Error handling
--- Check if awesome encountered an error during startup and fell back to
+-- Check if awesoie encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
 if awesome.startup_errors then
 	naughty.notify({
@@ -222,7 +222,7 @@ awful.screen.connect_for_each_screen(function(s)
 	})
 	s.mywibox = wibox({
 		x = 0,
-		y = 10,
+		y = 15,
 		width = s.geometry.width,
 		height = 20,
 		ontop = true,
@@ -231,7 +231,7 @@ awful.screen.connect_for_each_screen(function(s)
 		fg = "#ffffff",
 	})
 	s.mywibox:struts({
-		top = 30,
+		top = 35,
 	})
 	-- Add widgets to the wibox
 	s.mywibox:setup({
@@ -592,3 +592,5 @@ client.connect_signal("unfocus", function(c)
 	c.border_color = beautiful.border_normal
 end)
 -- }}}
+awful.spawn.with_shell("picom")
+awful.spawn.with_shell("~/nixos/bin/setWallpaper")

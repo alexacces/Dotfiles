@@ -34,6 +34,8 @@
     nodejs
     stylua
     prettierd
+    picom
+    feh
   ];
 
   programs.neovim = {
