@@ -22,7 +22,7 @@
         "tray",
     ],
     "custom/avatar" : {
-         "format": " -Nixos",
+         "format": " - ",
     },
      "niri/workspaces": {
          "format":"{icon}",
