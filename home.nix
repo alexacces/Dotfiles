@@ -34,15 +34,14 @@
     nodejs
     stylua
     prettierd
-    picom
-    feh
+    waybar
+    wofi
   ];
 
   programs.neovim = {
     enable = true;
     package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
   };
-
   programs.git.enable = true;
 
   home.stateVersion = "25.05";

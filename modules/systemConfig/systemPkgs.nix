@@ -8,7 +8,6 @@
     pkgs.firefox
     pkgs.ghostty
     pkgs.waybar
-    pkgs.fuzzel
     pkgs.hyprlock
     pkgs.git
     pkgs.swaybg

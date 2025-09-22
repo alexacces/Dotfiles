@@ -40,8 +40,8 @@
           ./modules/systemConfig/systemBoot.nix
           ./modules/systemConfig/systemUsers.nix
           ./modules/systemConfig/systemPkgs.nix
-          #./modules/systemConfig/systemWayland.nix
-          ./modules/systemConfig/systemXlibre.nix
+          ./modules/systemConfig/systemWayland.nix
+          #./modules/systemConfig/systemXlibre.nix
           ./modules/systemConfig/vm.nix
 
           xlibre-overlay.nixosModules.overlay-xlibre-xserver

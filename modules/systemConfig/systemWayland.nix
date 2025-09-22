@@ -1,10 +1,17 @@
 {
+  pkgs,
   ...
 }:
 {
-  services.xserver.enable = true;
+  #services.xserver.enable = true;
   services.displayManager.ly.enable = true;
-  programs.niri = {
-    enable = true;
-  };
+  programs.hyprland.enable = true; # enable Hyprland
+
+  environment.systemPackages = [
+    # ... other packages
+    pkgs.kitty # required for the default Hyprland config
+  ];
+
+  # Optional, hint Electron apps to use Wayland:
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 }
