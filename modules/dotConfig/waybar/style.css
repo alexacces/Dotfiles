@@ -17,8 +17,8 @@
   color: #babbf1;
 }
 
-#workspaces button.focused {
-  background: #c29176;
+#workspaces .active {
+  background: #ffffff;
   color: #000000;
   border-radius: 0px 0px 0px 0px;
 }

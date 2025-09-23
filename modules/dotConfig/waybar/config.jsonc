@@ -8,10 +8,11 @@
     // Choose the order of the modules
     "modules-left": [
         "custom/avatar",
-        "hyprland/workspaces"
+        "clock",
+        "wlr/taskbar"
     ],
     "modules-center": [
-        "clock",
+        "hyprland/workspaces"
     ],
     "modules-right": [
         "pulseaudio",
@@ -41,8 +42,8 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "tooltip-format": "󱑀 <big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "󱑀 {:%Y-%m-%d}"
     },
     "cpu": {
         "format": "{usage}% ",
