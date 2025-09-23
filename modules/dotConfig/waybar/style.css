@@ -39,6 +39,7 @@ button {
 #custom-avatar,
 #cpu,
 #temperature,
+#window,
 #tray,
 #memory {
   background-color: transparent;
@@ -47,7 +48,8 @@ button {
   color: #000000;
 }
 #custom-avatar {
-  color: #000000;
+  background: #1e1e1e;
+  color: #ffffff;
   font-size: 16;
 }
 
@@ -55,14 +57,7 @@ button {
   background: #1e1e1e;
   color: #ffffff;
 }
-
-#pulseaudio {
-}
-#network {
-}
-#cpu {
-}
-#temperature {
-}
-#memory {
+#taskbar {
+  background: #1e1e1e;
+  color: #ffffff;
 }

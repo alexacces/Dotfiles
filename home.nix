@@ -24,6 +24,7 @@
     xclip
     fzf
     ntfs3g
+    wofi
     #for neovim
     nodePackages.typescript
     nodePackages.typescript-language-server
@@ -34,8 +35,6 @@
     nodejs
     stylua
     prettierd
-    waybar
-    wofi
   ];
 
   programs.neovim = {

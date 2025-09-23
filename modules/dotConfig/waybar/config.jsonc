@@ -9,7 +9,7 @@
     "modules-left": [
         "custom/avatar",
         "clock",
-        "wlr/taskbar"
+        "hyprland/window"
     ],
     "modules-center": [
         "hyprland/workspaces"
@@ -22,8 +22,15 @@
         "network",
         "tray",
     ],
+    "hyprland/window": {
+	"format": "{}",
+	"rewrite": {
+		"(.*) - Mozilla Firefox": "🌎 $1",
+		"(.*) - zsh": "> [$1]"
+	}
+    },
     "custom/avatar" : {
-         "format": " - ",
+         "format": " ",
     },
      "niri/workspaces": {
          "format":"{icon}",
