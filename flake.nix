@@ -25,7 +25,6 @@
       hostname = "nixos";
 
       #User config
-
       name = "dev";
       homeDirectory = "/home/${name}";
       groups = [
@@ -80,7 +79,6 @@
             name
             homeDirectory
             ;
-
         };
       };
     };
