@@ -1,4 +1,7 @@
 {
+  timezone,
+  version,
+  hostname,
   ...
 }:
 {
@@ -6,10 +9,11 @@
     /etc/nixos/hardware-configuration.nix
   ];
   networking.networkmanager.enable = true;
-  time.timeZone = "Asia/Jakarta";
+  networking.hostName = hostname;
+  time.timeZone = "${timezone}";
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
   ];
-  system.stateVersion = "25.05"; # Did you read the comment?
+  system.stateVersion = "${version}"; # Did you read the comment?
 }

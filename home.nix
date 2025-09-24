@@ -3,12 +3,15 @@
   inputs,
   lib,
   unstable,
+  version,
+  name,
+  homeDirectory,
   ...
 }:
 
 {
-  home.username = "dev";
-  home.homeDirectory = "/home/dev";
+  home.username = name;
+  home.homeDirectory = homeDirectory;
   home.packages = with unstable; [
     clang
     tree
@@ -43,5 +46,5 @@
     cp -av $HOME/nixos/modules/dotConfig/* ~/.config;
     for f in $HOME/nixos/modules/homeConfig/*; do cp -av "$f" ~/."$(basename "$f")"; done
   '';
-  home.stateVersion = "25.05";
+  home.stateVersion = "${version}";
 }

@@ -1,12 +1,14 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  name,
+  groups,
+  ...
+}:
 {
   programs.zsh.enable = true;
-  users.users.dev = {
+  users.users.${name} = {
     isNormalUser = true;
     shell = pkgs.zsh;
-    extraGroups = [
-      "wheel"
-      "libvirtd"
-    ]; # Enable ‘sudo’ for the user.
+    extraGroups = groups; # Enable ‘sudo’ for the user.
   };
 }

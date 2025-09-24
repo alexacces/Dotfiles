@@ -18,7 +18,20 @@
       ...
     }@inputs:
     let
+      #System config
       system = "x86_64-linux";
+      timezone = "Asia/Jakarta";
+      version = "25.05";
+      hostname = "nixos";
+
+      #User config
+
+      name = "dev";
+      homeDirectory = "/home/${name}";
+      groups = [
+        "wheel"
+        "libvirtd"
+      ];
 
       unstable = import nixpkgs-unstable {
         inherit system;
@@ -31,7 +44,16 @@
     in
     {
       #system level config
-      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit
+            timezone
+            version
+            name
+            groups
+            hostname
+            ;
+        };
         system = system;
         modules = [
           ./modules/systemConfig/systemCore.nix
@@ -45,13 +67,20 @@
       };
 
       #home level config
-      homeConfigurations.dev = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations.${name} = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
           ./home.nix
         ];
         extraSpecialArgs = {
-          inherit inputs unstable;
+          inherit
+            inputs
+            unstable
+            version
+            name
+            homeDirectory
+            ;
+
         };
       };
     };
