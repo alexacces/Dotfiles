@@ -2,29 +2,24 @@
   pkgs,
   inputs,
   lib,
+  unstable,
   ...
 }:
 
 {
-  xdg.enable = true;
   home.username = "dev";
   home.homeDirectory = "/home/dev";
-  home.activation.myHook = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    cp -av $HOME/nixos/modules/dotConfig/* ~/.config;
-    for f in $HOME/nixos/modules/homeConfig/*; do cp -av "$f" ~/."$(basename "$f")"; done
-  '';
 
-  home.packages = with pkgs; [
+  home.packages = with unstable; [
     clang
     tree
     fastfetch
     nerd-fonts.jetbrains-mono
     tmux
     gimp3-with-plugins
-    xclip
     fzf
     ntfs3g
-    wofi
+
     #for neovim
     nodePackages.typescript
     nodePackages.typescript-language-server
@@ -35,13 +30,19 @@
     nodejs
     stylua
     prettierd
+    lsd
+    wl-clipboard
   ];
 
   programs.neovim = {
     enable = true;
     package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
   };
-  programs.git.enable = true;
 
+  xdg.enable = true;
+  home.activation.myHook = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    cp -av $HOME/nixos/modules/dotConfig/* ~/.config;
+    for f in $HOME/nixos/modules/homeConfig/*; do cp -av "$f" ~/."$(basename "$f")"; done
+  '';
   home.stateVersion = "25.05";
 }

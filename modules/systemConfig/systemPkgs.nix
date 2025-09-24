@@ -5,13 +5,10 @@
 {
   environment.systemPackages = [
     pkgs.curl
-    pkgs.firefox
-    pkgs.ghostty
-    pkgs.waybar
-    pkgs.hyprlock
+    pkgs.brave
     pkgs.git
-    pkgs.swaybg
-    pkgs.pavucontrol
+    pkgs.xclip
     pkgs.kdePackages.dolphin
+    pkgs.home-manager
   ];
 }

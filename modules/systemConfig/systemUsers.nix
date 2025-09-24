@@ -4,6 +4,9 @@
   users.users.dev = {
     isNormalUser = true;
     shell = pkgs.zsh;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [
+      "wheel"
+      "libvirtd"
+    ]; # Enable ‘sudo’ for the user.
   };
 }

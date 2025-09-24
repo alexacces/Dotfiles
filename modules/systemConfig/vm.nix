@@ -1,6 +1,5 @@
 { pkgs, ... }:
 {
-  users.groups.libvirtd.members = [ "dev" ];
   virtualisation.libvirtd.enable = true;
   environment.systemPackages = with pkgs; [
     virt-manager

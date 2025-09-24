@@ -57,7 +57,6 @@ button {
   background: #1e1e1e;
   color: #ffffff;
 }
-#taskbar {
-  background: #1e1e1e;
-  color: #ffffff;
+#window {
+  border-bottom: 2px solid #000000;
 }
