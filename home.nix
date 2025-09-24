@@ -9,7 +9,6 @@
 {
   home.username = "dev";
   home.homeDirectory = "/home/dev";
-
   home.packages = with unstable; [
     clang
     tree
