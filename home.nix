@@ -36,9 +36,16 @@
     wl-clipboard
   ];
 
-  programs.neovim = {
-    enable = true;
-    package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+  programs = {
+    neovim = {
+      enable = true;
+      package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+    };
+    vscode = {
+      enable = true;
+      package = pkgs.vscode.fhs;
+    };
+
   };
 
   xdg.enable = true;

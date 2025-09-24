@@ -32,13 +32,19 @@
     "custom/avatar" : {
          "format": " ",
     },
-     "niri/workspaces": {
-         "format":"{icon}",
-         "format-icons": {
-             "focused": "",
-             "default": ""
-         }
-     },
+    "hyprland/workspaces": {
+	"format": "{name}: {icon}",
+	"format-icons": {
+		"1": " ",
+		"2": " ",
+		"3": " ",
+		"4": "zero",
+		"5": "zero",
+	},
+       "persistent-workspaces": {
+             "*": 5, // 5 workspaces by default on every monitor
+       }
+    },
     "tray": {
         // "icon-size": 21,
         "spacing": 10,
