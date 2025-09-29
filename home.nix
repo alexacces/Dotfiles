@@ -45,6 +45,9 @@
       enable = true;
       package = pkgs.vscode.fhs;
     };
+    direnv = {
+      enable = true;
+    };
 
   };
 

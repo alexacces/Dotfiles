@@ -29,7 +29,6 @@ button {
 
 #workspaces button:hover {
   background: #1e1e1e;
-  border: 0px solid transparent;
 }
 
 #clock,
@@ -49,13 +48,9 @@ button {
 #custom-avatar {
   background: #1e1e1e;
   color: #ffffff;
-  font-size: 16;
+  font-size: 15;
 }
 
-#clock {
-  background: #1e1e1e;
-  color: #ffffff;
-}
 #window {
   border-bottom: 2px solid #000000;
 }

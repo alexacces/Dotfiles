@@ -3,7 +3,7 @@
   ...
 }:
 {
-  #services.xserver.enable = true;
+  #  services.xserver.enable = true;
   services.displayManager.ly.enable = true;
   programs.hyprland.enable = true; # enable Hyprland
   services.pipewire = {
