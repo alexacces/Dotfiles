@@ -11,6 +11,7 @@
 }
 #workspaces {
   background: #101010;
+  border-radius: 5px;
 }
 
 #workspaces button {
@@ -20,7 +21,6 @@
 #workspaces .active {
   background: #ffffff;
   color: #000000;
-  border-radius: 0px 0px 0px 0px;
 }
 
 button {

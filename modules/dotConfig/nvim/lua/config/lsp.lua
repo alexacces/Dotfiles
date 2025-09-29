@@ -42,7 +42,7 @@ for _, path in ipairs(runtime_paths) do
 	end
 end
 
-lspconfig.lua_ls.setup({
+vim.lsp.config("lua_ls", {
 	cmd = { "/home/dev/.nix-profile/bin/lua-language-server" },
 	capabilities = capabilities,
 	settings = {
@@ -62,11 +62,11 @@ lspconfig.lua_ls.setup({
 })
 
 -- for nixos
-lspconfig.nil_ls.setup({})
+vim.lsp.config("nil_ls", {})
 --fot javascript
-lspconfig.ts_ls.setup({})
+vim.lsp.config("ts_ls", {})
 
-lspconfig.eslint.setup({
+vim.lsp.config("eslint", {
 	root_dir = require("lspconfig/util").root_pattern(
 		"tsconfig.json",
 		"jsconfig.json",

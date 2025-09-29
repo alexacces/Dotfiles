@@ -8,7 +8,6 @@
     // Choose the order of the modules
     "modules-left": [
         "custom/avatar",
-        "clock",
         "hyprland/window"
     ],
     "modules-center": [
@@ -20,6 +19,7 @@
         "memory",
         "temperature",
         "network",
+        "clock",
         "tray",
     ],
     "hyprland/window": {
