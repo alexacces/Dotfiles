@@ -11,7 +11,8 @@
         "hyprland/window"
     ],
     "modules-center": [
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "custom/wlogout",
     ],
     "modules-right": [
         "network",
@@ -101,4 +102,10 @@
         },
         "on-click": "pavucontrol"
     },
+    "custom/wlogout": {
+        "format": "", // Use an icon, like a power symbol from a Nerd Font
+        "tooltip-format": "Power Menu",
+        "on-click": "wlogout",
+        "interval": "once" // Only execute when clicked
+    }
 }

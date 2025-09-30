@@ -34,6 +34,7 @@
     prettierd
     lsd
     wl-clipboard
+    wlogout
   ];
 
   programs = {
