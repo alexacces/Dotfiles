@@ -36,6 +36,7 @@
     wl-clipboard
     wlogout
     libnotify
+    apple-cursor
   ];
 
   programs = {
