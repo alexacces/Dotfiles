@@ -44,6 +44,8 @@
     {
       #system level config
       nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
+        inherit pkgs;
+
         specialArgs = {
           inherit
             timezone

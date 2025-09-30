@@ -5,7 +5,7 @@
 {
   environment.systemPackages = [
     pkgs.curl
-    pkgs.brave
+    pkgs.google-chrome
     pkgs.git
     pkgs.xclip
     pkgs.kdePackages.dolphin
