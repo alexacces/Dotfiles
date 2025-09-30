@@ -6,6 +6,7 @@
   #  services.xserver.enable = true;
   services.displayManager.ly.enable = true;
   programs.hyprland.enable = true; # enable Hyprland
+  programs.hyprland.portalPackage = pkgs.xdg-desktop-portal-hyprland;
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   services.pipewire = {
     enable = true;

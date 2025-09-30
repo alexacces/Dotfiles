@@ -35,6 +35,7 @@
     lsd
     wl-clipboard
     wlogout
+    libnotify
   ];
 
   programs = {
@@ -50,6 +51,20 @@
       enable = true;
     };
 
+  };
+  services.mako = {
+    enable = true;
+    settings = {
+      # Global settings
+      background-color = "#222222";
+      border-radius = 8;
+      border-size = 2;
+      default-timeout = 5000; # 5 seconds
+      font = "sans 10";
+      layer = "overlay"; # or "top"
+      max-visible = 5;
+      max-history = 50;
+    };
   };
 
   xdg.enable = true;

@@ -1,2 +1,2 @@
 bindkey -s '^f' '~/nixos/bin/tmuxCreate\n'
-alias hmf="home-manager switch --flake ."
+alias ls="lsd"

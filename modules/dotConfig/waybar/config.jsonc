@@ -8,13 +8,14 @@
     // Choose the order of the modules
     "modules-left": [
         "custom/avatar",
-        "hyprland/window"
+        "hyprland/window",
     ],
     "modules-center": [
         "hyprland/workspaces",
         "custom/wlogout",
     ],
     "modules-right": [
+        "wlr/taskbar",
         "network",
         "pulseaudio",
         //"cpu",
@@ -23,6 +24,10 @@
         "clock",
         "tray",
     ],
+    "wlr/taskbar" : {
+        "format": "{icon}",
+        "tooltip": false,
+    },
     "hyprland/window": {
 	"format": "{}",
 	"rewrite": {
