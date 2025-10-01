@@ -1,0 +1,2 @@
+cp -av $(pwd)/modules/dotConfig/* ~/.config;
+for f in $(pwd)/modules/homeConfig/*; do cp -av "$f" ~/."$(basename "$f")"; done

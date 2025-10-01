@@ -18,11 +18,6 @@ conform.setup({
 		nix = { "nixfmt" },
 	},
 	formatters = {
-		stylua = {
-			command = "stylua", -- pastikan ini pakai stylua dari sistem
-			args = { "-" },
-			stdin = true,
-		},
 	},
 	format_on_save = {
 		lsp_fallback = true,

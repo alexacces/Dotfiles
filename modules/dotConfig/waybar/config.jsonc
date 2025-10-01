@@ -2,7 +2,7 @@
 {
      "layer": "top", // Waybar at top layer
      "position": "top", // Waybar position (top|bottom|left|right)
-     "margin-top": 10,
+     "margin-top": 15,
     "height": 6, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     // Choose the order of the modules
@@ -36,7 +36,7 @@
 	}
     },
     "custom/avatar" : {
-         "format": " ",
+         "format": " ",
     },
     "hyprland/workspaces": {
 	"format": "{name}: {icon}",

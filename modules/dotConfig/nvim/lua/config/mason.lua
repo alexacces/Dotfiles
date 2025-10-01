@@ -12,6 +12,8 @@ require("mason-lspconfig").setup({
 		"html",
 		"tailwindcss",
 		"pyright",
+		"prettierd",
+		"stylua",
 	},
 	automatic_enable = {
 		"rust_analyzer",
