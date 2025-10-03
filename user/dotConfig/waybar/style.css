@@ -1,35 +1,35 @@
 * {
-    font-family: JetBrainsMono Nerd Font;
-    font-weight: bold;
-    font-size: 10px;
-    min-height: 0px;
+  font-family: JetBrainsMono Nerd Font;
+  font-weight: bold;
+  font-size: 10px;
+  min-height: 0px;
 }
 
 #waybar {
-    background: transparent;
-    color: #c6d0f5;
+  background: transparent;
+  color: #c6d0f5;
 }
 
 #workspaces {
-    background: #101010;
-    border-radius: 5px;
+  background: #101010;
+  border-radius: 5px;
 }
 
 #workspaces button {
-    color: #babbf1;
+  color: #babbf1;
 }
 
 #workspaces .active {
-    background: #ffffff;
-    color: #000000;
+  background: #ffffff;
+  color: #000000;
 }
 
 button {
-    background: transparent;
+  background: transparent;
 }
 
 #workspaces button:hover {
-    background: #1e1e1e;
+  background: #1e1e1e;
 }
 
 #clock,
@@ -42,23 +42,23 @@ button {
 #window,
 #tray,
 #memory {
-    background-color: transparent;
-    padding: 0rem;
-    padding: 0px 5px 0px 5px;
-    color: #ffffff;
+  background-color: transparent;
+  padding: 0rem;
+  padding: 0px 5px 0px 5px;
+  color: #ffffff;
 }
 
 #custom-avatar {
-    background: #1e1e1e;
-    color: #ffffff;
-    font-size: 15;
+  background: #1e1e1e;
+  color: #ffffff;
+  font-size: 15;
 }
 
 #custom-wlogout {
-    background: #101010;
-    border-radius: 5px;
-    margin-left: 15px;
-    padding-left: 2px;
-    color: #ffffff;
-    font-size: 15;
+  background: #101010;
+  border-radius: 5px;
+  margin-left: 15px;
+  padding-left: 2px;
+  color: #ffffff;
+  font-size: 15;
 }
