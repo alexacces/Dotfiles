@@ -12,7 +12,6 @@ require("mason-lspconfig").setup({
 		"html",
 		"tailwindcss",
 		"pyright",
-		"prettierd",
 		"stylua",
 	},
 	automatic_enable = {
@@ -27,4 +26,14 @@ require("mason-lspconfig").setup({
 		"cssmodules_ls",
 		"stylua",
 	},
+})
+
+require("mason-tool-installer").setup({
+	ensure_installed = {
+		"prettierd",
+		"eslint_d",
+		"stylua",
+	},
+	auto_update = true,
+	run_on_start = true,
 })

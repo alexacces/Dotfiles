@@ -17,8 +17,7 @@ conform.setup({
 		--python = { "isort", "black" },
 		nix = { "nixfmt" },
 	},
-	formatters = {
-	},
+	formatters = {},
 	format_on_save = {
 		lsp_fallback = true,
 		async = false,

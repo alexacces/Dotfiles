@@ -1,0 +1,22 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "workbench.colorTheme": "Tokyo Night Storm",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "vim.useSystemClipboard": true,
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.files.save"]
+    },
+  {
+    "before": ["<leader>", "e"],
+    "commands": ["workbench.view.explorer"]
+  },
+  {
+    "before": ["<leader>", "f"],
+    "commands": ["workbench.action.quickOpen"]
+  }
+}

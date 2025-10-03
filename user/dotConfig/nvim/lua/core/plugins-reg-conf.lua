@@ -14,6 +14,7 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-telescope/telescope-file-browser.nvim" },
 	{ src = "https://github.com/stevearc/conform.nvim" },
 	{ src = "https://github.com/tribela/transparent.nvim" },
-	{ src = "https://github.com/shaunsingh/nord.nvim" },
+	{ src = "https://github.com/folke/tokyonight.nvim" },
 	{ src = "https://github.com/tamton-aquib/staline.nvim" },
+	{ src = "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim" },
 })

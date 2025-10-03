@@ -17,3 +17,4 @@ tmux new-session -d -s "$selected" -c "$PROJECTS_DIR/$selected" 2>/dev/null
 tmux new-session -A -s "$selected" -c "$PROJECTS_DIR/$selected" 2>/dev/null
 tmux switch-client -t "$selected"
 
+
