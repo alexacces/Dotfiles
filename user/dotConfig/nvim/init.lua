@@ -14,4 +14,5 @@ require("telescope").setup()
 require("ibl").setup()
 require("luasnip.loaders.from_vscode").lazy_load()
 --require("transparent").setup({})
-require("staline").setup()
+require("staline").setup({})
+
