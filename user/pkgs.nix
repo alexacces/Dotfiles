@@ -17,5 +17,12 @@
     emmet-ls
     eslint_d
     clang-tools
+    nodejs
+    python3
+    lsd
+    tree
+    tmux
+    cargo
+    rustc
   ];
 }
