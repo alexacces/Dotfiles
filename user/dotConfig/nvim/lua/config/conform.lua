@@ -16,10 +16,10 @@ conform.setup({
 		lua = { "stylua" },
 		--python = { "isort", "black" },
 		nix = { "nixfmt" },
+		rust = { "rustfmt" },
 	},
-	formatters = {},
 	format_on_save = {
-		lsp_fallback = true,
+		lsp_fallback = false,
 		async = false,
 		timeout_ms = 500,
 	},

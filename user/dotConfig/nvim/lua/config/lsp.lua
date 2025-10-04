@@ -1,49 +1,6 @@
-vim.diagnostic.config({
-	virtual_text = {
-		prefix = "●", -- simbol di depan pesan
-		spacing = 2, -- jarak dari teks kode
-	},
-	signs = {
-		text = {
-			[vim.diagnostic.severity.ERROR] = " ",
-			[vim.diagnostic.severity.WARN] = " ",
-			[vim.diagnostic.severity.INFO] = "󰋼 ",
-			[vim.diagnostic.severity.HINT] = "󰌵 ",
-		},
-		texthl = {
-			[vim.diagnostic.severity.ERROR] = "Error",
-			[vim.diagnostic.severity.WARN] = "Error",
-			[vim.diagnostic.severity.HINT] = "Hint",
-			[vim.diagnostic.severity.INFO] = "Info",
-		},
-		numhl = {
-			[vim.diagnostic.severity.ERROR] = "",
-			[vim.diagnostic.severity.WARN] = "",
-			[vim.diagnostic.severity.HINT] = "",
-			[vim.diagnostic.severity.INFO] = "",
-		},
-	},
-	underline = true, -- garis bawah teks error
-	update_in_insert = true, -- tetap tampil meski lagi mengetik
-	severity_sort = true, -- urutkan error > warning > info > hint
-})
-
-local lspconfig = require("lspconfig")
 local capabilities = require("blink.cmp").get_lsp_capabilities()
-vim.bo.omnifunc = "v:lua.vim.lsp.omnifunc"
-
-local project_dir = vim.fn.getcwd()
-local runtime_paths = vim.api.nvim_get_runtime_file("", true)
-local filtered_paths = {}
-
-for _, path in ipairs(runtime_paths) do
-	if path:match("/share/nvim/") or path:match("/site/pack/") or path:match(project_dir) then
-		table.insert(filtered_paths, path)
-	end
-end
-
 vim.lsp.config("lua_ls", {
-	cmd = { "/home/dev/.nix-profile/bin/lua-language-server" },
+	cmd = { "lua-language-server" },
 	capabilities = capabilities,
 	settings = {
 		formatting = {
@@ -61,17 +18,25 @@ vim.lsp.config("lua_ls", {
 	},
 })
 
--- for nixos
-vim.lsp.config("nil_ls", {})
---fot javascript
-vim.lsp.config("ts_ls", {})
-
-vim.lsp.config("eslint", {
-	root_dir = require("lspconfig/util").root_pattern(
-		"tsconfig.json",
-		"jsconfig.json",
-		"package.json",
-		".git",
-		vim.fn.getcwd()
-	),
+vim.api.nvim_create_autocmd("CursorHold", {
+	callback = function()
+		vim.diagnostic.open_float(nil, { focus = false })
+	end,
 })
+vim.o.updatetime = 250
+
+-- Should enable
+vim.lsp.enable("lua_ls")
+vim.lsp.enable("nixd")
+vim.lsp.enable("bashls")
+vim.lsp.enable("rust_analyzer")
+vim.lsp.enable("clangd")
+--web
+vim.lsp.enable("html")
+vim.lsp.enable("cssls")
+vim.lsp.enable("jsonls")
+vim.lsp.enable("eslint")
+vim.lsp.enable("ts_ls")
+vim.lsp.enable("tailwindcss")
+vim.lsp.enable("emmet_ls")
+vim.lsp.enable("svelte")
