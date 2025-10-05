@@ -1,5 +1,4 @@
 {
-  pkgs,
   username,
   homeDirectory,
   ...
@@ -11,6 +10,5 @@
   ];
   home.username = username;
   home.homeDirectory = homeDirectory;
-  programs.home-manager.enable = true;
   home.stateVersion = "25.05";
 }
