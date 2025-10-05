@@ -1,5 +1,4 @@
-bindkey -s '^f' '~/archDotfiles/bin/tmuxCreate\n'
+bindkey -s '^f' '~/Nixos/bin/tmuxCreate\n'
 alias ls="lsd"
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -2,34 +2,41 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, ... }:
+{
+  pkgs,
+  ...
+}:
 
 {
-	nix.settings.experimental-features = ["nix-command" "flakes"];
-  imports =
-    [ # Include the results of the hardware scan.
-      /etc/nixos/hardware-configuration.nix
-    ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+  nix.settings.trusted-users = [ "ammv" ];
+  imports = [
+    # Include the results of the hardware scan.
+    /etc/nixos/hardware-configuration.nix
+  ];
 
   # Use the GRUB 2 boot loader.
-boot.kernelParams = [
-	"quiet"
-	"video=1366x768"
-];
+  boot.kernelParams = [
+    "quiet"
+    "video=1366x768"
+  ];
   boot.loader.grub.enable = true;
-   boot.loader.grub.efiSupport = true;
+  boot.loader.grub.efiSupport = true;
   # boot.loader.grub.efiInstallAsRemovable = true;
-   boot.loader.efi.efiSysMountPoint = "/boot/efi";
+  boot.loader.efi.efiSysMountPoint = "/boot/efi";
   # Define on which hard drive you want to install Grub.
-   boot.loader.grub.device = "nodev"; # or "nodev" for efi only
+  boot.loader.grub.device = "nodev"; # or "nodev" for efi only
 
-   networking.hostName = "ammv"; # Define your hostname.
+  networking.hostName = "ammv"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   # Set your time zone.
-   time.timeZone = "Asia/Jakarta";
+  time.timeZone = "Asia/Jakarta";
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -44,19 +51,19 @@ boot.kernelParams = [
   # };
 
   # Enable the X11 windowing system.
-services.xserver.resolutions = [
-      { x = 1366; y = 768; } # Example: Set 1920x1080 as default
-    ];
-   services.xserver.enable = true;
-   services.xserver.windowManager.awesome.enable = true;
-   services.displayManager.ly.enable = true;
-
-
-  
+  services.xserver.resolutions = [
+    {
+      x = 1366;
+      y = 768;
+    } # Example: Set 1920x1080 as default
+  ];
+  services.xserver.enable = true;
+  services.xserver.windowManager.awesome.enable = true;
+  services.displayManager.ly.enable = true;
 
   # Configure keymap in X11
-   services.xserver.xkb.layout = "us";
-   services.xserver.xkb.options = "caps:escape";
+  services.xserver.xkb.layout = "us";
+  services.xserver.xkb.options = "caps:escape";
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
@@ -64,34 +71,32 @@ services.xserver.resolutions = [
   # Enable sound.
   # services.pulseaudio.enable = true;
   # OR
-   services.pipewire = {
-     enable = true;
-     pulse.enable = true;
-   };
+  services.pipewire = {
+    enable = true;
+    pulse.enable = true;
+  };
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-   users.users.ammv = {
-     isNormalUser = true;
-     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-     packages = with pkgs; [
-     ];
-   };
+  programs.zsh.enable = true;
+  users.users.ammv = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    shell = pkgs.zsh;
+  };
 
   # programs.firefox.enable = true;
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
-   environment.systemPackages = with pkgs; [
-     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-     wget
-	kitty
-chromium
-git
-lsd
-   ];
+  environment.systemPackages = with pkgs; [
+    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    kitty
+    chromium
+    git
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -137,4 +142,3 @@ lsd
   system.stateVersion = "25.05"; # Did you read the comment?
 
 }
-

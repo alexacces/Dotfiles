@@ -2,6 +2,7 @@
 {
   home.packages = with pkgs; [
     fastfetch
+    lsd
     stylua
     nixfmt
     prettierd
@@ -24,5 +25,8 @@
     tmux
     cargo
     rustc
+    clang
+    fzf
+    gnumake
   ];
 }
