@@ -1,6 +1,8 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
+    feh
+    picom
     fastfetch
     lsd
     stylua

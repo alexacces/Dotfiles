@@ -1,1 +1,2 @@
-swaybg -i ~/nixos/wallpaper/walpaperMactahoe.jpg
+#swaybg -i ~/nixos/wallpaper/walpaperMactahoe.jpg
+feh --bg-scale ~/Nixos/wallpaper/walpaperMactahoe.jpg
