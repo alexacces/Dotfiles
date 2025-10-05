@@ -1,6 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, apple-fonts, ... }:
 {
   home.packages = with pkgs; [
+    apple-fonts.sf-pro
     feh
     picom
     fastfetch
@@ -31,5 +32,6 @@
     fzf
     gnumake
     vscode-fhs
+    xclip
   ];
 }
