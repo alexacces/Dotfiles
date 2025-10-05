@@ -57,7 +57,11 @@
       y = 768;
     } # Example: Set 1920x1080 as default
   ];
-  services.xserver.enable = true;
+  services.xserver = {
+    enable = true;
+    autoRepeatDelay = 200;
+    autoRepeatInterval = 50; # Example for rate
+  };
   services.xserver.windowManager.awesome.enable = true;
   services.displayManager.ly.enable = true;
 
