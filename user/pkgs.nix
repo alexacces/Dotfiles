@@ -28,5 +28,6 @@
     clang
     fzf
     gnumake
+    vscode-fhs
   ];
 }
