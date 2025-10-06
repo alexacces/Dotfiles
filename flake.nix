@@ -4,10 +4,12 @@
   nixConfig = {
     substituters = [
       "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store?priority=10"
+      "https://cache.nixos.org/"
     ];
   };
 
   inputs = {
+    xlibre-overlay.url = "git+https://codeberg.org/takagemacoed/xlibre-overlay";
     apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
     apple-fonts.inputs.nixpkgs.follows = "nixpkgs";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -31,16 +33,15 @@
     let
 
       system = "x86_64-linux";
-      lib = nixpkgs.lib;
+      username = "ammv";
+      homeDirectory = "/home/ammv/";
       hostname = "ammv";
+
+      lib = nixpkgs.lib;
       pkgs = import nixpkgs-unstable {
         inherit system;
         config.allowUnfree = true;
       };
-
-      username = "ammv";
-      homeDirectory = "/home/ammv/";
-
     in
 
     {
@@ -48,6 +49,8 @@
 
         inherit system;
         modules = [
+          inputs.xlibre-overlay.nixosModules.overlay-xlibre-xserver
+          inputs.xlibre-overlay.nixosModules.overlay-xlibre-xf86-input-libinput
           ./configuration.nix
           ./x11awesome.nix
         ];

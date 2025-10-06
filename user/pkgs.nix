@@ -1,6 +1,8 @@
 { pkgs, apple-fonts, ... }:
 {
   home.packages = with pkgs; [
+    btop
+    rofi
     gnome-calculator
     apple-fonts.sf-pro
     feh

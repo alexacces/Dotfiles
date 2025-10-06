@@ -351,8 +351,8 @@ globalkeys = gears.table.join(
 	end, { description = "lua execute prompt", group = "awesome" }),
 	-- Menubar
 	awful.key({ modkey }, "d", function()
-		menubar.show()
-	end, { description = "show the menubar", group = "launcher" })
+		awful.spawn("rofi -drun-match-fields name -show drun")
+	end, { description = "open rofi menu", group = "launcher" })
 )
 
 clientkeys = gears.table.join(
@@ -585,6 +585,7 @@ client.connect_signal("unfocus", function(c)
 	c.border_color = beautiful.border_normal
 end)
 -- }}}
-beautiful.useless_gap = 10
+beautiful.useless_gap = 4
 awful.spawn.with_shell("~/Nixos/bin/setWallpaper")
 awful.spawn.with_shell("picom")
+beautiful.font = "SF Pro Display 8"
