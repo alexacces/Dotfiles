@@ -56,6 +56,17 @@
 
         inherit pkgs;
         modules = [
+          #gtk
+          {
+            gtk = {
+              enable = true;
+              font = {
+                name = "SF Pro Text"; # Ganti sesuai hasil fc-list
+                size = 8;
+              };
+
+            };
+          }
           #Neovim nightly
           {
 
@@ -77,10 +88,6 @@
 
         extraSpecialArgs = {
           apple-fonts = apple-fonts.packages.x86_64-linux;
-          inherit
-            username
-            homeDirectory
-            ;
         };
 
       };
