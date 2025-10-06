@@ -37,6 +37,7 @@
         inherit system;
         config.allowUnfree = true;
       };
+
       username = "ammv";
       homeDirectory = "/home/ammv/";
 
@@ -48,6 +49,7 @@
         inherit system;
         modules = [
           ./configuration.nix
+          ./x11awesome.nix
         ];
 
       };
@@ -56,32 +58,35 @@
 
         inherit pkgs;
         modules = [
+
           #gtk
           {
             gtk = {
               enable = true;
               font = {
-                name = "SF Pro Text"; # Ganti sesuai hasil fc-list
+                name = "SF Pro Display"; # Ganti sesuai hasil fc-list
                 size = 8;
               };
 
             };
-          }
-          #Neovim nightly
-          {
+            xdg.portal = {
+              enable = true;
+              extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+              config.common.default = "*";
+            };
+            #Neovim nightly
 
             programs.neovim = {
               enable = true;
               package = inputs.neovim-nightly-overlay.packages.${system}.default;
             };
-          }
 
-          #home config
-          {
+            #home config
             home.username = username;
             home.homeDirectory = homeDirectory;
             home.stateVersion = "25.05";
           }
+
           #packages
           ./user/pkgs.nix
         ];

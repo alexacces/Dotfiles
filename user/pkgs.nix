@@ -3,7 +3,6 @@
   home.packages = with pkgs; [
     gnome-calculator
     apple-fonts.sf-pro
-    apple-fonts.sf-mono
     feh
     picom
     fastfetch
