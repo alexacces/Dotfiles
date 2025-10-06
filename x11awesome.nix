@@ -13,7 +13,7 @@
     autoRepeatInterval = 50; # Example for rate
   };
   services.xserver.windowManager.awesome.enable = true;
-  services.displayManager.ly.enable = true;
+  #services.displayManager.ly.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb.layout = "us";

@@ -1,13 +1,13 @@
 // -*- mode: jsonc -*-
 {
-  "layer": "top", // Waybar at top layer
-  "position": "top", // Waybar position (top|bottom|left|right)
-  "margin-top": 10,
+  "layer": "bottom", // Waybar at top layer
+  "position": "bottom", // Waybar position (top|bottom|left|right)
+  "margin-top": 0,
   "height": 6, // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
   // Choose the order of the modules
-  "modules-left": ["custom/avatar", "hyprland/window"],
-  "modules-center": ["hyprland/workspaces", "custom/wlogout"],
+  "modules-left": ["custom/avatar", "niri/window"],
+  "modules-center": ["niri/workspaces"],
   "modules-right": [
     "wlr/taskbar",
     "network",
@@ -16,13 +16,14 @@
     //"memory",
     "temperature",
     "clock",
+"custom/wlogout",
     "tray"
   ],
   "wlr/taskbar": {
     "format": "{icon}",
     "tooltip": false
   },
-  "hyprland/window": {
+  "niri/window": {
     "format": "{}",
     "rewrite": {
       "(.*) - Mozilla Firefox": "🌎 $1",
@@ -30,19 +31,14 @@
     }
   },
   "custom/avatar": {
-    "format": " "
+    "format": " "
   },
-  "hyprland/workspaces": {
+  "niri/workspaces": {
     "format": "{icon}",
+
     "format-icons": {
-      "1": " ",
-      "2": " ",
-      "3": " ",
-      "4": " ",
-      "5": " "
-    },
-    "persistent-workspaces": {
-      "*": 5 // 5 workspaces by default on every monitor
+    "active": "",
+	"default": ""
     }
   },
   "tray": {

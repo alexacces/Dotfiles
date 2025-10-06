@@ -1,6 +1,9 @@
 { pkgs, apple-fonts, ... }:
 {
   home.packages = with pkgs; [
+    swaybg
+    waybar
+    fuzzel
     btop
     rofi
     gnome-calculator
