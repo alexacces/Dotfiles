@@ -1,6 +1,8 @@
 { pkgs, apple-fonts, ... }:
 {
   home.packages = with pkgs; [
+    unzip
+    apple-cursor
     swaybg
     waybar
     fuzzel
