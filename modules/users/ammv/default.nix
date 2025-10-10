@@ -8,7 +8,6 @@
 }:
 {
   imports = [ ./pkgs ];
-
   gtk = {
     enable = true;
     font = {

@@ -1,6 +1,7 @@
 { pkgs, apple-fonts, ... }:
 {
   home.packages = with pkgs; [
+    cachix
     unzip
     apple-cursor
     swaybg
@@ -39,8 +40,9 @@
     clang
     fzf
     gnumake
-    vscode-fhs
     xclip
     dconf
+    vscode-fhs
+    libnotify
   ];
 }

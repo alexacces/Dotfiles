@@ -11,5 +11,6 @@
     ../../modules/system/users
     ../../modules/system/xlibreAwesomeWm
     ../../modules/system/waylandNiri
+    ../../modules/system/envVars
   ];
 }

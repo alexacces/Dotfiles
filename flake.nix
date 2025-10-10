@@ -5,6 +5,7 @@
     substituters = [
       "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store?priority=10"
       "https://cache.nixos.org/"
+      "https://niri.cachix.org"
     ];
   };
 
@@ -27,6 +28,9 @@
     neovim-nightly-overlay = {
       url = "github:nix-community/neovim-nightly-overlay";
     };
+    niri = {
+      url = "github:sodiboo/niri-flake";
+    };
   };
 
   outputs =
@@ -37,6 +41,7 @@
       nixpkgs-unstable,
       home-manager,
       apple-fonts,
+      niri,
       ...
     }@inputs:
 
@@ -45,7 +50,7 @@
       system = "x86_64-linux";
       username = "ammv";
       homeDirectory = "/home/ammv/";
-      hostname = "maxusH61";
+      hostname = "ammv";
 
       lib = nixpkgs.lib;
       pkgs = import nixpkgs-unstable {
@@ -60,13 +65,14 @@
 
         inherit system;
         modules = [
+          niri.nixosModules.niri
           inputs.xlibre-overlay.nixosModules.overlay-xlibre-xserver
           inputs.xlibre-overlay.nixosModules.overlay-xlibre-xf86-input-libinput
           ./host/maxusH61
 
         ];
         specialArgs = {
-          inherit hostname;
+          inherit hostname inputs;
         };
       };
 
