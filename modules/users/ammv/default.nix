@@ -8,6 +8,7 @@
 }:
 {
   imports = [ ./pkgs ];
+
   gtk = {
     enable = true;
     font = {
@@ -16,6 +17,7 @@
     };
 
   };
+
   xdg.portal = {
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
