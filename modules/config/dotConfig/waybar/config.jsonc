@@ -3,7 +3,7 @@
   "layer": "bottom", // Waybar at top layer
   "position": "bottom", // Waybar position (top|bottom|left|right)
   "margin-top": 0,
-  "height": 6, // Waybar height (to be removed for auto height)
+  "height": 8, // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
   // Choose the order of the modules
   "modules-left": ["custom/avatar", "niri/window"],
@@ -37,8 +37,8 @@
     "format": "{icon}",
 
     "format-icons": {
-    "active": "",
-	"default": ""
+    "active": "",
+	"default": "󱓼"
     }
   },
   "tray": {

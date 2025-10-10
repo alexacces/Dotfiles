@@ -1,66 +1,56 @@
 * {
-  font-family:
-    Liga SFMono Nerd Font,
-    JetBrainsMono Nerd Font;
-  font-weight: bold;
-  font-size: 10px;
-  min-height: 0px;
+  font-family: Liga SFMono Nerd Font;
+  font-size: 10px; /* Ukuran font kecil */
+  padding: 0px; /* Hilangkan padding */
+  margin: 0px; /* Hilangkan margin */
+  min-height: 0px; /* Pastikan tidak ada tinggi minimum */
+  min-width: 0px; /* Pastikan tidak ada lebar minimum */
+  border: none;
 }
 
 #waybar {
-  background: #000000;
-  color: #c6d0f5;
+  background: black;
 }
 
 #workspaces {
-  background: #101010;
-  border-radius: 5px;
+  padding: 0px;
+  margin: 0px;
 }
 
 #workspaces button {
-  color: #babbf1;
-}
-
-#workspaces .active {
-  background: #f5ad42;
-  color: #000000;
-}
-
-button {
+  padding: 0px 6px;
+  margin: 0px 2px;
+  color: #ffffff;
   background: transparent;
+  border: none;
+  border-radius: 4px;
+}
+
+#workspaces button.active {
+  background-color: white;
+  color: black;
+}
+
+#workspaces button.urgent {
+  background-color: #bf616a;
 }
 
 #workspaces button:hover {
-  background: #1e1e1e;
+  background-color: #3b4252;
 }
-
 #clock,
-#pulseaudio,
-#network,
-#custom-avatar,
-#custom-wlogout,
-#cpu,
-#temperature,
 #window,
+#network,
+#custom-wlogout,
+#custom-avatar,
+#pulseaudio,
 #tray,
-#memory {
-  background-color: transparent;
-  padding: 0rem;
-  padding: 0px 5px 0px 5px;
-  color: #ffffff;
+#temperature {
+  background-color: #101010;
+  color: white;
+  padding: 0px 5px; /* Hilangkan padding */
 }
-
 #custom-avatar {
-  background: #1e1e1e;
-  color: #ffffff;
-  font-size: 12;
-}
-
-#custom-wlogout {
-  background: #101010;
-  border-radius: 5px;
-  margin-left: 15px;
-  padding-left: 2px;
-  color: #ffffff;
-  font-size: 12;
+  background-color: #101010;
+  color: white;
 }
