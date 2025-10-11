@@ -6,8 +6,8 @@
   "height": 8, // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
   // Choose the order of the modules
-  "modules-left": ["custom/avatar","niri/workspaces", "niri/window"],
-  "modules-center": [],
+  "modules-left": ["custom/avatar","niri/workspaces" ],
+  "modules-center": ["niri/window"],
   "modules-right": [
     "wlr/taskbar",
     "network",

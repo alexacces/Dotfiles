@@ -1,6 +1,7 @@
 { pkgs, apple-fonts, ... }:
 {
   home.packages = with pkgs; [
+    wlogout
     cachix
     unzip
     apple-cursor
