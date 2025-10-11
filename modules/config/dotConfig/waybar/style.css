@@ -27,8 +27,8 @@
 }
 
 #workspaces button.active {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
 }
 
 #workspaces button.urgent {
@@ -53,4 +53,5 @@
 #custom-avatar {
   background-color: #101010;
   color: white;
+  font-size: 14;
 }
