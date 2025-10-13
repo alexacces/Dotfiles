@@ -10,7 +10,6 @@
     fuzzel
     btop
     rofi
-    gnome-calculator
     apple-fonts.sf-pro
     feh
     picom
