@@ -11,6 +11,6 @@
     ./pkgs
     ./users
     ./waylandNiri
-    ./xlibreAwesomeWm
+    #    ./xlibreAwesomeWm
   ];
 }
