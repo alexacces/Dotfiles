@@ -28,7 +28,7 @@
 
 #workspaces button.active {
   background-color: black;
-  color: white;
+  color: red;
 }
 
 #workspaces button.urgent {
@@ -51,7 +51,8 @@
   padding: 0px 5px; /* Hilangkan padding */
 }
 #custom-avatar {
-  background-color: #101010;
   color: white;
-  font-size: 14;
+  border-radius: 5px;
+  border: 2px solid white;
+  font-size: 18;
 }
