@@ -1,8 +1,4 @@
 {
-  "editor.lineNumbers": "relative",
-  "workbench.iconTheme": "material-icon-theme",
-  "liveServer.settings.donotShowInfoMsg": true,
-  "workbench.colorTheme": "Tokyo Night Storm",
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "vim.useSystemClipboard": true,

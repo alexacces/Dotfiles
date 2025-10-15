@@ -7,7 +7,9 @@
   // "width": 1280, // Waybar width
   // Choose the order of the modules
   "modules-left": ["custom/avatar","niri/workspaces" ],
-  "modules-center": ["niri/window"],
+  "modules-center": [
+    "clock"
+  ],
   "modules-right": [
     "wlr/taskbar",
     "network",
@@ -15,7 +17,6 @@
     //"cpu",
     //"memory",
     "temperature",
-    "clock",
 "custom/wlogout",
     "tray"
   ],
@@ -31,14 +32,14 @@
     }
   },
   "custom/avatar": {
-    "format": "󰯬󰰐󰰐"
+    "format": "󰯬󰰖󰰱"
   },
   "niri/workspaces": {
     "format": "{icon}",
 
     "format-icons": {
-    "active": "",
-	"default": ""
+    "active": "",
+	"default": ""
     }
   },
   "tray": {
