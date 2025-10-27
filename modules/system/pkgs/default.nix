@@ -6,6 +6,11 @@
     kitty
     chromium
     git
+lsd
+gnumake
+fuzzel
+waybar
+swaybg
   ];
   system.stateVersion = "25.05"; # Did you read the comment?
 }

@@ -50,7 +50,7 @@
       system = "x86_64-linux";
       username = "ammv";
       homeDirectory = "/home/ammv/";
-      hostname = "ammv";
+      hostname = "nixos";
 
       lib = nixpkgs.lib;
       pkgs = import nixpkgs-unstable {

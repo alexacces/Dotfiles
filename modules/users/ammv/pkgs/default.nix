@@ -5,14 +5,9 @@
     cachix
     unzip
     apple-cursor
-    swaybg
-    waybar
-    fuzzel
     btop
     rofi
     apple-fonts.sf-pro
-    feh
-    picom
     fastfetch
     lsd
     stylua
@@ -32,14 +27,12 @@
     clang-tools
     nodejs
     python3
-    lsd
     tree
     tmux
     cargo
     rustc
     clang
     fzf
-    gnumake
     xclip
     dconf
     vscode-fhs
