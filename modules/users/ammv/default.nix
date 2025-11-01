@@ -2,8 +2,6 @@
   pkgs,
   username,
   homeDirectory,
-  inputs,
-  system,
   ...
 }:
 {
@@ -24,11 +22,6 @@
     config.common.default = "*";
   };
   #Neovim nightly
-
-  programs.neovim = {
-    enable = true;
-    package = inputs.neovim-nightly-overlay.packages.${system}.default;
-  };
 
   #home config
   home.username = username;

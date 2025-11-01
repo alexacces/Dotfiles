@@ -10,9 +10,6 @@
   };
 
   inputs = {
-    xlibre-overlay = {
-      url = "git+https://codeberg.org/takagemacoed/xlibre-overlay";
-    };
     apple-fonts = {
       url = "github:Lyndeno/apple-fonts.nix";
     };
@@ -28,9 +25,6 @@
     neovim-nightly-overlay = {
       url = "github:nix-community/neovim-nightly-overlay";
     };
-    niri = {
-      url = "github:sodiboo/niri-flake";
-    };
   };
 
   outputs =
@@ -41,7 +35,6 @@
       nixpkgs-unstable,
       home-manager,
       apple-fonts,
-      niri,
       ...
     }@inputs:
 
@@ -65,14 +58,12 @@
 
         inherit system;
         modules = [
-          niri.nixosModules.niri
-          inputs.xlibre-overlay.nixosModules.overlay-xlibre-xserver
-          inputs.xlibre-overlay.nixosModules.overlay-xlibre-xf86-input-libinput
           ./host/maxusH61
 
         ];
         specialArgs = {
-          inherit hostname inputs;
+          apple-fonts = apple-fonts.packages.x86_64-linux;
+          inherit hostname inputs system;
         };
       };
 
@@ -84,7 +75,6 @@
         ];
 
         extraSpecialArgs = {
-          apple-fonts = apple-fonts.packages.x86_64-linux;
           inherit
             system
             inputs

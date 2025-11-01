@@ -1,4 +1,4 @@
-{ pkgs, apple-fonts, ... }:
+{ pkgs, ... }:
 {
   home.packages = with pkgs; [
     wlogout
@@ -7,7 +7,6 @@
     apple-cursor
     btop
     rofi
-    apple-fonts.sf-pro
     fastfetch
     lsd
     stylua
