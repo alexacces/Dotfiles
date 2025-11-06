@@ -586,6 +586,7 @@ client.connect_signal("unfocus", function(c)
 end)
 -- }}}
 beautiful.useless_gap = 4
-awful.spawn.with_shell("~/Nixos/bin/setWallpaper")
+awful.spawn.with_shell("~/Dotfiles/bin/setWallpaper")
+awful.spawn.with_shell("~/Dotfiles/bin/setXcaps")
 awful.spawn.with_shell("picom")
 beautiful.font = "SF Pro Display 8"

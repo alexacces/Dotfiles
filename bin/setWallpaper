@@ -1,2 +1,2 @@
 swaybg -i ~/Dotfiles/wallpaper/monterey.jpg
-#feh --bg-scale ~/Nixos/wallpaper/walpaperMac.jpg
+feh --bg-scale ~/Dotfiles/wallpaper/monterey.jpg
