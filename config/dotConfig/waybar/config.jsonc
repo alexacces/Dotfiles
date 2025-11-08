@@ -1,0 +1,107 @@
+// -*- mode: jsonc -*-
+{
+  "layer": "top", // Waybar at top layer
+  "position": "top", // Waybar position (top|bottom|left|right)
+  "margin-top": 10,
+  "height": 15, // Waybar height (to be removed for auto height)
+  // "width": 1280, // Waybar width
+  // Choose the order of the modules
+  "modules-left": ["custom/avatar","niri/workspaces" ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "wlr/taskbar",
+    "network",
+    "pulseaudio",
+    //"cpu",
+    //"memory",
+    "temperature",
+"custom/wlogout",
+    "tray"
+  ],
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "tooltip": false
+  },
+  "niri/window": {
+    "format": "{}",
+    "rewrite": {
+      "(.*) - Mozilla Firefox": "🌎 $1",
+      "(.*) - zsh": "> [$1]"
+    }
+  },
+  "custom/avatar": {
+    "format": ""
+  },
+  "niri/workspaces": {
+    "format": "{icon}",
+
+    "format-icons": {
+    "active": "",
+	"default": ""
+    }
+  },
+  "tray": {
+    // "icon-size": 21,
+    "spacing": 10
+    // "icons": {
+    //   "blueman": "bluetooth",
+    //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+    // }
+  },
+  "clock": {
+    // "timezone": "America/New_York",
+    "tooltip-format": "󱑀 <big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "󱑀 {:%Y-%m-%d}"
+  },
+  "cpu": {
+    "format": "{usage}% ",
+    "tooltip": false
+  },
+  "memory": {
+    "format": "{}% "
+  },
+  "temperature": {
+    // "thermal-zone": 2,
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    // "format-critical": "{temperatureC}°C {icon}",
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": ["", "", ""]
+  },
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format-wifi": "󰤨 {essid} ({signalStrength}%)",
+    "format-ethernet": "Ethernet",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ⚠",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  },
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{volume}% {icon} {format_source}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  },
+  "custom/wlogout": {
+    "format": "", // Use an icon, like a power symbol from a Nerd Font
+    "tooltip-format": "Power Menu",
+    "on-click": "wlogout",
+    "interval": "once" // Only execute when clicked
+  }
+}
