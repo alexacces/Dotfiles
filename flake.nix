@@ -7,7 +7,9 @@
     ];
   };
   inputs = {
-    nixpkgs = { url = "github:NixOS/nixpkgs/nixos-25.05"; };
+    nixpkgs = {
+      url = "github:NixOS/nixpkgs/nixos-25.05";
+    };
 
     neovim-nightly-overlay = {
       url = "github:nix-community/neovim-nightly-overlay";
@@ -17,8 +19,10 @@
   outputs =
 
     { self, nixpkgs, ... }@inputs:
-    let system = "x86_64-linux";
-    in {
+    let
+      system = "x86_64-linux";
+    in
+    {
       nixosConfigurations.rustlinux = nixpkgs.lib.nixosSystem {
 
         inherit system;
@@ -26,6 +30,7 @@
           ./modules/base-system
           ./modules/Awesomewm
           ./modules/neovim-nightly
+          ./modules/fonts
           ./modules/pkgs
         ];
 
