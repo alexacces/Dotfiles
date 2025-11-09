@@ -1,2 +1,9 @@
-cp -av $(pwd)/config/dotConfig/* ~/.config;
-for f in $(pwd)/config/homeConfig/*; do cp -av "$f" ~/."$(basename "$f")"; done
+for d in nvim alacritty waybar awesome picom Code; do
+    echo "Ready ... $d"
+  rsync -avh --delete "$(pwd)/config/dotConfig/$d/" ~/.config/$d/ >/dev/null
+done
+for f in "$(pwd)"/config/homeConfig/*; do
+    echo "Ready ... $f"
+  rsync -avh "$f" ~/."$(basename "$f")" >/dev/null
+done
+

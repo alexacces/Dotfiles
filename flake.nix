@@ -27,11 +27,11 @@
 
         inherit system;
         modules = [
-          ./modules/base-system
-          ./modules/Awesomewm
-          ./modules/neovim-nightly
-          ./modules/fonts
-          ./modules/pkgs
+          ./modules/base-system # nixos base
+          ./modules/Awesomewm # wndow manager
+          ./modules/neovim-nightly # code editor
+          ./modules/fonts # fonts config
+          ./modules/pkgs # software or system package
         ];
 
         specialArgs = { inherit inputs; };

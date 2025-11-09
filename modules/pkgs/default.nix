@@ -11,5 +11,6 @@
     fzf
     tmux
     fastfetch
+    nixd
   ];
 }

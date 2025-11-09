@@ -1,10 +1,13 @@
-{ ... }: {
+{ ... }:
+{
   # Enable the X11 windowing system.
-  services.xserver.resolutions = [{
-    x = 1366;
-    y = 768;
-  } # Example: Set 1920x1080 as default
-    ];
+  services.xserver.resolutions = [
+    {
+      x = 1366;
+      y = 768;
+    }
+    # Example: Set 1920x1080 as default
+  ];
   services.xserver = {
     enable = true;
     autoRepeatDelay = 200;
