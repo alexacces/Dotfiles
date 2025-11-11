@@ -14,11 +14,19 @@
     neovim-nightly-overlay = {
       url = "github:nix-community/neovim-nightly-overlay";
     };
+    apple-fonts = {
+      url = "github:Lyndeno/apple-fonts.nix";
+    };
 
   };
   outputs =
 
-    { self, nixpkgs, ... }@inputs:
+    {
+      self,
+      nixpkgs,
+      apple-fonts,
+      ...
+    }@inputs:
     let
       system = "x86_64-linux";
     in
@@ -42,7 +50,7 @@
           }
         ];
 
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs apple-fonts; };
       };
     };
 }
