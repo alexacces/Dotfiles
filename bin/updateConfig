@@ -1,4 +1,4 @@
-for d in nvim alacritty waybar awesome picom Code; do
+for d in nvim alacritty waybar awesome picom Code niri; do
     echo "Ready ... $d"
   rsync -avh --delete "$(pwd)/config/dotConfig/$d/" ~/.config/$d/ >/dev/null
 done

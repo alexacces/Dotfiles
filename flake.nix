@@ -28,10 +28,18 @@
         inherit system;
         modules = [
           ./modules/base-system # nixos base
-          ./modules/Awesomewm # wndow manager
+          ./modules/Niri # wndow manager
           ./modules/neovim-nightly # code editor
           ./modules/fonts # fonts config
           ./modules/pkgs # software or system package
+
+          # specific module
+
+          {
+            nixpkgs.config = {
+              allowUnfree = true;
+            };
+          }
         ];
 
         specialArgs = { inherit inputs; };

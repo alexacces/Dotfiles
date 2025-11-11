@@ -4,13 +4,17 @@
     clang
     stylua
     nixfmt-rfc-style
-    picom
-    feh
-    rofi
     lsd
     fzf
     tmux
     fastfetch
     nixd
+    vscode-fhs
+    cargo
+    rustc
+    waybar
+    wofi
+    swaybg
+    apple-cursor
   ];
 }

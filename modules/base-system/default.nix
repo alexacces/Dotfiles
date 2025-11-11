@@ -8,6 +8,10 @@
 {
   imports = [ /etc/nixos/hardware-configuration.nix ];
 
+  environment.sessionVariables = {
+    XDG_SESSION_TYPE = "wayland";
+    ELECTRON_OZONE_PLATFORM_HINT = "auto";
+  };
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
