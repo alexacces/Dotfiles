@@ -13,6 +13,7 @@
   "modules-right": [
     "wlr/taskbar",
     "network",
+    "custom/netspeed",
     "pulseaudio",
     //"cpu",
     //"memory",
@@ -34,6 +35,11 @@
   "custom/avatar": {
     "format": ""
   },
+  "custom/netspeed": {
+  "exec": "~/Dotfiles/bin/netspeed",
+  "interval": 1,
+  "format": "{}"
+},
   "niri/workspaces": {
     "format": "{icon}",
 

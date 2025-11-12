@@ -16,5 +16,8 @@
     wofi
     swaybg
     apple-cursor
+    rust-analyzer
+    rustfmt
+    obsidian
   ];
 }
