@@ -14,7 +14,7 @@
     "wlr/taskbar",
     "network",
     "custom/netspeed",
-    "pulseaudio",
+    //"pulseaudio",
     //"cpu",
     //"memory",
     "temperature",
